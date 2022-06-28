@@ -99,6 +99,7 @@ export default class IndexPage extends React.Component {
 
   handleSearchClick = () => {
     this.getData()
+    console.log(this.state.searchValue)
   }
 
   handlePageChange = (_event, newPage) => {
