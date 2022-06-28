@@ -52,9 +52,13 @@ function EquipmentPage(props) {
       ],
     }))
 
+  const searchValue = window.location.href.split('?search=')[1]
+  console.log(searchValue)
+
   return (
     <IndexPage
-      defaultSearchValue={props.match.params.search}
+      // defaultSearchValue={props.match.params.search}
+      defaultSearchValue='EMCO%203810'
       defaultSortBy={'serialNumber'}
       headers={headers}
       history={props.history}
