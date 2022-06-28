@@ -206,6 +206,9 @@ IndexPage.propTypes = {
   transformData: PropTypes.func.isRequired,
 }
 
+const searchValue = window.location.href.split('?search=')[1]
+console.log(searchValue)
+
 IndexPage.defaultProps = {
   defaultSearchValue: '',
 }
