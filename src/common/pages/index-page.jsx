@@ -119,8 +119,6 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
-    document.querySelector('input.MuiInputBase-input').value = window.location.href.split('?search=')[1]
-    handleSearchClick()
 
     if (this.state.loading) {
       return <Spinner />
