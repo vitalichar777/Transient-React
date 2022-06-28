@@ -99,7 +99,7 @@ export default class IndexPage extends React.Component {
 
   handleSearchClick = () => {
     this.getData()
-    console.log(this.state.searchValue)
+    window.history.pushState(null, null, '?search=' + this.state.searchValue)
   }
 
   handlePageChange = (_event, newPage) => {
@@ -119,6 +119,9 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
+    document.querySelector('input.MuiInputBase-input').value = window.location.href.split('?search=')[1]
+    handleSearchClick()
+
     if (this.state.loading) {
       return <Spinner />
     }
