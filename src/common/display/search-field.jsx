@@ -5,7 +5,7 @@ import { Button, TextField } from '@material-ui/core'
 const SearchField = props => {
 
   searchValue = window.location.href.split('?search=')[1]
-
+  console.log(searchValue)
   const onKeyPress = event => {
     if (event.charCode === 13) {
       props.onSearchClick()
@@ -18,7 +18,7 @@ const SearchField = props => {
         id='search'
         inputProps={{ onKeyPress }}
         label='Search'
-        value={this.searchValue}
+        value={props.value}
         onChange={props.onSearchChange}
       />
       <Button onClick={props.onSearchClick}>Search</Button>
