@@ -17,6 +17,10 @@ function EquipmentDetailsInfo(props) {
     calDue,
   } = props.equipment
 
+  if (eventJobNumber.includes('Reserved')) {
+    eventStatus = "RESERVED";
+  }
+
   return (
     <Grid container>
       <Grid item xs={12}>
