@@ -131,7 +131,9 @@ export default class IndexPage extends React.Component {
     const transformedData = this.props
       .transformData(this.state.data)
       .map(row => {
-        const cells = row.cells.map(cell => {
+        let flag = 0;
+
+        let cells = row.cells.map(cell => {
           const result = { ...cell }
           if (cell.type === 'button') {
             if (cell.callback === 'details') {
@@ -146,8 +148,25 @@ export default class IndexPage extends React.Component {
               result.callback = this.handleDeleteClick
             }
           }
+
+          if (cell.id === 'eventJobNumber' && cell.value.includes('Reserved')) {
+            flag = 1;
+          }
+
           return result
-        })
+        });
+
+        if ( flag == 1 ) {
+          cells = row.cells.map(cell => {
+            const result = { ...cell }
+            if (cell.id === 'eventStatus' && cell.value.includes('OUT')) {
+              cell.value = 'RESERVED'
+            }
+  
+            return result
+          })
+        }
+
         return { id: row.id, cells }
       })
 
