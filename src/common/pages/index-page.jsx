@@ -149,13 +149,8 @@ export default class IndexPage extends React.Component {
             }
           }
 
-          if (cell.id === 'eventJobNumber' && cell.value.includes('Reserved')) {
-            flag = 1;
-          }
-
           return result
         });
-
 
         return { id: row.id, cells }
       })
