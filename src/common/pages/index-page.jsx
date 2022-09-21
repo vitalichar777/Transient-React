@@ -155,18 +155,15 @@ export default class IndexPage extends React.Component {
 
           return result
         });
-/*
+
         if ( flag == 1 ) {
           cells = row.cells.map(cell => {
             const result = { ...cell }
-            if (cell.id === 'eventStatus' && cell.value.includes('OUT')) {
-              cell.value = 'RESERVED'
-            }
+
   
             return result
           })
         }
-        */
 
         return { id: row.id, cells }
       })
