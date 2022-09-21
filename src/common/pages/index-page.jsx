@@ -156,30 +156,6 @@ export default class IndexPage extends React.Component {
           return result
         });
 
-        if ( flag == 1 ) {
-          cells = row.cells.map(cell => {
-            const result = { ...cell }
-            if (cell.type === 'button') {
-              if (cell.callback === 'details') {
-                result.callback = this.handleDetailsClick
-              } else if (cell.callback === 'showEquipment') {
-                result.callback = this.handleShowEquipmentClick
-              } else if (cell.callback === 'showModels') {
-                result.callback = this.handleShowModelsClick
-              } else if (cell.callback === 'edit') {
-                result.callback = this.handleEditClick
-              } else if (cell.callback === 'delete') {
-                result.callback = this.handleDeleteClick
-              }
-            }
-
-            if (cell.id === 'eventStatus' && cell.value.includes('OUT')) {
-              /*result.value = 'RESERVED' */
-            }
-  
-            return result
-          })
-        }
 
         return { id: row.id, cells }
       })
