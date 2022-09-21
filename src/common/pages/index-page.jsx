@@ -172,8 +172,10 @@ export default class IndexPage extends React.Component {
                 result.callback = this.handleDeleteClick
               }
             }
-            
+
+            console.log(cell)
             if (cell.id === 'eventStatus' && cell.value.includes('OUT')) {
+              console.log(cell)
               cell.value = 'RESERVED'
             }
   
