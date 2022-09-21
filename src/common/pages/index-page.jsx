@@ -155,7 +155,7 @@ export default class IndexPage extends React.Component {
 
           return result
         });
-
+/*
         if ( flag == 1 ) {
           cells = row.cells.map(cell => {
             const result = { ...cell }
@@ -166,6 +166,7 @@ export default class IndexPage extends React.Component {
             return result
           })
         }
+        */
 
         return { id: row.id, cells }
       })
