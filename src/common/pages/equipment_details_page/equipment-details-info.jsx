@@ -5,6 +5,11 @@ import Subtitle from 'common/display/subtitle'
 import utils from 'src/utils'
 
 function EquipmentDetailsInfo(props) {
+
+  if (props.equipment.eventJobNumber.includes('Reserved')) {
+    props.equipment.eventStatus = "RESERVED";
+  }
+  
   const {
     oemName,
     modelName,
@@ -16,10 +21,6 @@ function EquipmentDetailsInfo(props) {
     calCompany,
     calDue,
   } = props.equipment
-
-  if (eventJobNumber.includes('Reserved')) {
-    eventStatus = "RESERVED";
-  }
 
   return (
     <Grid container>
