@@ -173,10 +173,9 @@ export default class IndexPage extends React.Component {
               }
             }
 
-            console.log(cell)
+            console.log('abc')
             if (cell.id === 'eventStatus' && cell.value.includes('OUT')) {
-              console.log(cell)
-              cell.value = 'RESERVED'
+              console.log(result)
             }
   
             return result
