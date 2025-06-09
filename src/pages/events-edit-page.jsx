@@ -57,7 +57,7 @@ function EventsEditPage(props) {
   }
 
   const submit = (equipmentId, state, success, failure) => {
-    const statusArray = ['ERROR', 'IN', 'OUT', 'READY', 'SOLD']
+    const statusArray = ['ERROR', 'IN', 'OUT', 'READY', 'SOLD', 'RESERVED', 'REPAIR', 'CALIBRATION']
     api.patchUpdate(
       'events',
       {
