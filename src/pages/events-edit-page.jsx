@@ -28,6 +28,12 @@ function EventsEditPage(props) {
           statusInt = 3
         } else if (status === 'SOLD') {
           statusInt = 4
+        } else if (status === 'RESERVED') {
+          statusInt = 5
+        } else if (status === 'REPAIR') {
+          statusInt = 6
+        } else if (status === 'CALIBRATION') {
+          statusInt = 7
         }
 
         success({
