@@ -88,6 +88,9 @@ export default class EventsEditCreatePage extends React.Component {
               { id: 2, name: 'OUT' },
               { id: 3, name: 'READY' },
               { id: 4, name: 'SOLD' },
+              { id: 5, name: 'RESERVED' },
+              { id: 6, name: 'REPAIR' },
+              { id: 7, name: 'CALIBRATION' }
             ]}
             required={true}
             value={this.state.status}
